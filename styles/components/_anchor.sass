@@ -1,0 +1,10 @@
+a
+  @extend .animation--ease-in-out
+  color: $anchor-color
+  text-decoration: none
+  &:hover, &:active
+    text-decoration: underline
+  &:hover
+    color: darken($anchor-color, 10%)
+  &:active
+    color: darken($anchor-color, 15%)
