@@ -1,6 +1,3 @@
-$highlight-radius: $radius
-
-
 .text
   &--center
     text-align: center
@@ -58,11 +55,16 @@ $highlight-radius: $radius
   &--soft
     color: lighten($text-color, 40%)
 
+  &--gap
+    letter-spacing: 1px
+  &--caps
+    text-transform: uppercase
+
   &--highlight
     +border-radius($highlight-radius)
     background: $main-color
     color: $bg-color
-    padding: $padding / 6 $padding / 2
+    padding: $code-padding
     &.text
       &--info, &--blue
         background-color: $info-color
