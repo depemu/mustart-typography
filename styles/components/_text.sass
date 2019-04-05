@@ -28,17 +28,51 @@
   &--main
     color: $main-color
   &--info, &--blue
+    color: $info-color
   &--success, &--green
+    color: $success-color
   &--warning, &--yellow, &--orange
+    color: $warning-color
   &--error, &--red
+    color: $error-color
 
   &--highlight
     background: $main-color
     color: $bg-color
     padding: $padding / 6 $padding / 2
+    &.text
+      &--info, &--blue
+        background-color: $info-color
+      &--success, &--green
+        background-color: $success-color
+      &--warning, &--yellow, &--orange
+        background-color: $warning-color
+      &--error, &--red
+        background-color: $error-color
 
 a
   &.text
+    &--info, &--blue
+      &:hover
+        color: darken($info-color, 10%)
+      &:active
+        color: darken($info-color, 15%)
+    &--success, &--green
+      &:hover
+        color: darken($success-color, 10%)
+      &:active
+        color: darken($success-color, 15%)
+    &--warning, &--yellow, &--orange
+      &:hover
+        color: darken($warning-color, 10%)
+      &:active
+        color: darken($warning-color, 15%)
+    &--error, &--red
+      &:hover
+        color: darken($error-color, 10%)
+      &:active
+        color: darken($error-color, 15%)
+
     &--highlight
       &:hover, &:active
         color: $bg-color
@@ -47,3 +81,25 @@ a
         background: darken($main-color, 10%)
       &:active
         background: darken($main-color, 15%)
+
+      &.text
+        &--info, &--blue
+          &:hover
+            background-color: darken($info-color, 10%)
+          &:active
+            background-color: darken($info-color, 15%)
+        &--success, &--green
+          &:hover
+            background-color: darken($success-color, 10%)
+          &:active
+            background-color: darken($success-color, 15%)
+        &--warning, &--yellow, &--orange
+          &:hover
+            background-color: darken($warning-color, 10%)
+          &:active
+            background-color: darken($warning-color, 15%)
+        &--error, &--red
+          &:hover
+            background-color: darken($error-color, 10%)
+          &:active
+            background-color: darken($error-color, 15%)
