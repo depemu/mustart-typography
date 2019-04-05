@@ -19,7 +19,7 @@ li
 dl
   @extend .last-margin
   &.dark
-    dt
+    > dt
       @extend .text--bold
       color: darken($text-color, 30%)
 dt
@@ -31,21 +31,21 @@ dd
 +x-medium-up
   dl
     &.side
-      dt
+      > dt
         float: left
         width: $list-side-width
-      dd
+      > dd
         margin-left: $list-side-width + $list-side-padding
         +clearfix
+      &.side
+        &--right
+          > dt
+            text-align: right
 
       @for $i from 1 through 10
         &--#{ 100 + 10 * $i }
           $width: $list-side-width + 10 * $i
-          dt
+          > dt
             width: $width
-          dd
+          > dd
             margin-left: $width + $list-side-padding
-
-      &--right
-        dt
-          text-align: right
