@@ -20,14 +20,24 @@ $highlight-radius: $radius
     font:
       family: $head-font
       weight: $head-font-weight
-  &--bold, &--strong
+  &--bold
     font:
       family: $bold-font
       weight: $bold-font-weight
-  &--italic, &--em
+  &--italic
     font:
       family: $italic-font
       style: $italic-font-style
+  &--strip
+    text:
+      decoration: line-through
+  &--underline
+    text:
+      decoration: underline
+
+  &--small
+    font:
+      size: 80%
 
   &--main
     color: $main-color
