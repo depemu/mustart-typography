@@ -22,10 +22,11 @@ table
       td
         &:first-child
           margin-top: 0
+  th, td
+    vertical-align: top
   th
   td
     display: block
-    vertical-align: top
     &:first-child
       margin-top: $table-padding
       &:before
@@ -69,3 +70,37 @@ table
             &:before
               width: $width
               margin-left: -$label-width
+
++large-up
+  .table
+    thead
+      display: table-header-group
+      width: 100%
+      border-bottom: $table-border-head
+      tr
+        &:first-child
+          display: table-row
+    tr
+      &:first-child
+        td
+          &:first-child
+            padding-top: $table-padding
+    th, td
+      display: table-cell
+      padding:
+        right: $table-padding
+      &:last-child
+        padding:
+          right: 0
+    th
+      color: $soft-color
+      padding-bottom: $table-padding
+    td
+      padding:
+        top: $table-padding
+        bottom: $table-padding
+        left: 0 !important
+      margin-bottom: 0
+      &:before
+        content: ''
+        display: none
