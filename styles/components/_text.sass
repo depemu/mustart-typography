@@ -1,3 +1,6 @@
+$highlight-radius: $radius
+
+
 .text
   &--center
     text-align: center
@@ -13,6 +16,7 @@
       family: $main-font
       weight: $main-font-weight
   &--head
+    color: $head-color
     font:
       family: $head-font
       weight: $head-font-weight
@@ -36,7 +40,16 @@
   &--error, &--red
     color: $error-color
 
+  &--light
+    color: lighten($text-color, 20%)
+  &--dark
+    color: darken($text-color, 20%)
+
+  &--soft
+    color: lighten($text-color, 40%)
+
   &--highlight
+    +border-radius($highlight-radius)
     background: $main-color
     color: $bg-color
     padding: $padding / 6 $padding / 2
