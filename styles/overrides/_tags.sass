@@ -1,0 +1,27 @@
+body
+  @extend .text--normal
+  font:
+    size: $main-font-size
+  background:
+    color: $bg-color
+  padding: $padding * 4
+  line-height: $line-height
+  color: $text-color
+
+section
+  @extend .last-margin-x3
+
+b, strong
+  @extend .text--bold
+
+i, em
+  @extend .text--italic
+
+s, del
+  @extend .text--strip
+
+u, ins
+  @extend .text--underline
+
+small
+  @extend .text--small

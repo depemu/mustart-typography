@@ -1,0 +1,18 @@
+.last-margin
+  +last-margin-bottom($padding)
+  &-x2
+    +last-margin-bottom($padding * 2)
+  &-x3
+    +last-margin-bottom($padding * 3)
+  &-x4
+    +last-margin-bottom($padding * 4)
+
+.margin
+  &-t
+    margin-top: $padding
+  &-b
+    margin-bottom: $padding
+  &-l
+    margin-left: $padding
+  &-r
+    margin-right: $padding

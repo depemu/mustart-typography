@@ -1,0 +1,135 @@
+.text
+  &--center
+    text-align: center
+  &--left
+    text-align: left
+  &--right
+    text-align: right
+  &--justify
+    text-align: justify
+
+  &--normal
+    font:
+      family: $main-font
+      weight: $main-font-weight
+  &--head
+    color: $head-color
+    font:
+      family: $head-font
+      weight: $head-font-weight
+  &--bold
+    font:
+      family: $bold-font
+      weight: $bold-font-weight
+  &--italic
+    font:
+      family: $italic-font
+      style: $italic-font-style
+  &--strip
+    text:
+      decoration: line-through
+  &--underline
+    text:
+      decoration: underline
+
+  &--small
+    font:
+      size: 80%
+
+  &--subtitle
+    @extend .text--soft
+    font-size: 90%
+    line-height: 120%
+
+  &--main
+    color: $main-color
+  &--info, &--blue
+    color: $info-color
+  &--success, &--green
+    color: $success-color
+  &--warning, &--orange
+    color: $warning-color
+  &--error, &--red
+    color: $error-color
+
+  &--light
+    color: $light-color
+  &--dark
+    color: $dark-color
+
+  &--soft
+    color: $soft-color
+
+  &--gap
+    letter-spacing: 1px
+  &--caps
+    text-transform: uppercase
+
+  &--highlight
+    +border-radius($highlight-radius)
+    background: $main-color
+    color: $bg-color
+    padding: $code-padding
+    &.text
+      &--info, &--blue
+        background-color: $info-color
+      &--success, &--green
+        background-color: $success-color
+      &--warning, &--orange
+        background-color: $warning-color
+      &--error, &--red
+        background-color: $error-color
+
+a
+  &.text
+    &--info, &--blue
+      &:hover
+        color: darken($info-color, 10%)
+      &:active
+        color: darken($info-color, 15%)
+    &--success, &--green
+      &:hover
+        color: darken($success-color, 10%)
+      &:active
+        color: darken($success-color, 15%)
+    &--warning, &--orange
+      &:hover
+        color: darken($warning-color, 10%)
+      &:active
+        color: darken($warning-color, 15%)
+    &--error, &--red
+      &:hover
+        color: darken($error-color, 10%)
+      &:active
+        color: darken($error-color, 15%)
+
+    &--highlight
+      &:hover, &:active
+        color: $bg-color
+        text-decoration: none
+      &:hover
+        background: darken($main-color, 10%)
+      &:active
+        background: darken($main-color, 15%)
+
+      &.text
+        &--info, &--blue
+          &:hover
+            background-color: darken($info-color, 10%)
+          &:active
+            background-color: darken($info-color, 15%)
+        &--success, &--green
+          &:hover
+            background-color: darken($success-color, 10%)
+          &:active
+            background-color: darken($success-color, 15%)
+        &--warning, &--orange
+          &:hover
+            background-color: darken($warning-color, 10%)
+          &:active
+            background-color: darken($warning-color, 15%)
+        &--error, &--red
+          &:hover
+            background-color: darken($error-color, 10%)
+          &:active
+            background-color: darken($error-color, 15%)

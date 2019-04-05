@@ -1,0 +1,17 @@
+pre, code, kbd
+  background: $code-bg-color
+  font:
+    family: $code-font
+
+pre
+  padding: $padding * 1.5
+  width: 100%
+  overflow: auto
+  color: $code-color
+
+code, kbd
+  @extend .text--gap
+  +border-radius($highlight-radius)
+  color: darken($code-bg-color, 25%)
+  padding: $code-padding
+  font-weight: normal

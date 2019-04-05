@@ -1,0 +1,106 @@
+$table-border: $border
+$table-border-width: $border-width
+$table-border-head: $border-dark
+$table-padding: $padding
+$table-label-width: 100px
+
+
+table
+  @extend .last-margin
+
+.table
+  width: 100%
+  thead
+    tr
+      &:first-child
+        display: none
+  tbody
+  tfoot
+  tr
+    border-bottom: $table-border
+    &:first-child
+      td
+        &:first-child
+          margin-top: 0
+  th, td
+    vertical-align: top
+  th
+  td
+    display: block
+    &:first-child
+      margin-top: $table-padding
+      &:before
+        margin-top: 0
+    &:last-child
+      margin-bottom: $table-padding
+    &:before
+      @extend .text--subtitle
+      content: attr(data-label)
+      display: block
+      margin-top: $table-padding
+
+
++small-up
+  .table
+    td
+      $label-width: $table-label-width + $table-padding
+      padding-left: $label-width
+      margin-top: $table-padding / 2
+      &:before
+        float: left
+        width: $table-label-width
+        margin:
+          left: -$label-width
+      &:after
+        clear: both
+        content: ''
+        display: block
+    td:first-child, td
+        &:before
+          margin:
+            top: 3px
+
+    &.side
+      @for $i from 1 to 16
+        &--#{ 100 + 10 * $i }
+          td
+            $width: 100px + 10 * $i
+            $label-width: $width + $table-padding
+            padding-left: $label-width
+            &:before
+              width: $width
+              margin-left: -$label-width
+
++large-up
+  .table
+    thead
+      display: table-header-group
+      width: 100%
+      border-bottom: $table-border-head
+      tr
+        &:first-child
+          display: table-row
+    tr
+      &:first-child
+        td
+          &:first-child
+            padding-top: $table-padding
+    th, td
+      display: table-cell
+      padding:
+        right: $table-padding
+      &:last-child
+        padding:
+          right: 0
+    th
+      color: $soft-color
+      padding-bottom: $table-padding
+    td
+      padding:
+        top: $table-padding
+        bottom: $table-padding
+        left: 0 !important
+      margin-bottom: 0
+      &:before
+        content: ''
+        display: none

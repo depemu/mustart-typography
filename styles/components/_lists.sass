@@ -1,0 +1,57 @@
+$list-padding: 10px
+$list-side-padding: $list-padding * 2
+$list-side-width: 100px
+
+
+ul, ol
+  @extend .last-margin
+  margin-left: $list-padding * 2.5
+  &.clean, &.inline
+    margin-left: 0
+  &.clean
+    list-style-type: none
+  &.inline
+    li
+      display: inline-block
+      margin-bottom: 0
+      +last-margin-right($list-padding * 2)
+ul
+  list-style-type: disc
+ol
+  list-style-type: decimal
+li
+  margin-bottom: $list-padding
+
+dl
+  @extend .last-margin
+  &.dark
+    > dt
+      @extend .text--bold
+      @extend .text--dark
+dt
+  @extend .text--light
+dd
+  margin-bottom: $list-padding
+
+
++x-medium-up
+  dl
+    &.side
+      > dt
+        float: left
+        width: $list-side-width
+      > dd
+        margin-left: $list-side-width + $list-side-padding
+        +clearfix
+      &.side
+        &--right
+          > dt
+            text-align: right
+
+      @for $i from 1 through 10
+        &--#{ 100 + 10 * $i }
+          $width: $list-side-width + 10 * $i
+          > dt
+            width: $width
+          > dd
+            margin-left: $width + $list-side-padding

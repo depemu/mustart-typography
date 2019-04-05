@@ -1,2 +1,2 @@
-# Mustart
-Front-end development starter
+# Mustart Typography
+Default typography styles

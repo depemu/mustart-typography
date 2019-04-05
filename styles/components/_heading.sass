@@ -1,0 +1,11 @@
+h1, h2, h3, h4, h5, h6
+  @extend .last-margin
+  @extend .text--head
+  line-height: $line-height
+
+@for $i from 1 through 6
+  h#{$i}
+    $main: $head-font-main
+    $divider: $head-font-divider * ($i - 1)
+
+    font-size: $main - $divider
