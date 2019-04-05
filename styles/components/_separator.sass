@@ -1,6 +1,16 @@
 .separator
-  @extend .last-margin-x2
-  margin-top: $padding * 2
+  @extend .last-margin
+  margin-top: $padding
   border-bottom: 1px solid darken($bg-color, 5%)
   &--main
     border-color: $main-color
+
+  &--small, &-s
+    @extend .last-margin-x2
+    margin-top: $padding * 2
+  &--medium, &-m
+    @extend .last-margin-x3
+    margin-top: $padding * 3
+  &--large, &-l
+    @extend .last-margin-x4
+    margin-top: $padding * 4
