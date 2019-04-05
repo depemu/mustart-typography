@@ -1,0 +1,18 @@
+$quote-size: 27px
+
+blockquote
+  @extend .last-margin
+  &:before
+    display: inline-block
+    content: '"'
+    font:
+      size: 300%
+    float: left
+    +size($quote-size)
+    margin:
+      top: 12px
+      left: -$quote-size
+cite
+  @extend .text--soft
+  display: block
+  margin-top: 5px
