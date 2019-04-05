@@ -1,7 +1,7 @@
 .separator
   @extend .last-margin
   margin-top: $padding
-  border-bottom: 1px solid darken($bg-color, 5%)
+  border-bottom: $border-light
   &--main
     border-color: $main-color
   &--info, &--blue
@@ -12,7 +12,6 @@
     border-color: $warning-color
   &--error, &--red
     border-color: $error-color
-
 
   &--small, &-s
     @extend .last-margin-x2
