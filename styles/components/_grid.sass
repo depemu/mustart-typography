@@ -1,0 +1,23 @@
+$grid-default-columns: 12
+$grid-default-padding: $padding
+$grid-default: (columns: $grid-default-columns, gutter: $grid-default-padding)
+$grid-default-clean: (columns: $grid-default-columns, gutter: 0)
+
+.grid
+  +grid-container
+  +grid-collapse($grid-default)
+  > .column, > .column--1
+    +grid-column(1, $grid-default)
+  > .column
+    @for $i from 2 through 12
+      &--#{ $i }
+        +grid-column($i, $grid-default)
+
+  &--clean
+    +grid-collapse($grid-default-clean)
+    > .column, .column--1
+      +grid-column(1, $grid-default-clean)
+    > .column
+      @for $i from 2 through 12
+        &--#{ $i }
+          +grid-column($i, $grid-default-clean)
