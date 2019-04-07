@@ -1,0 +1,10 @@
+=grid($grid)
+  +grid-collapse($grid)
+  > .column, .column--1
+    +grid-column(1, $grid)
+    margin-bottom: 0
+  > .column
+    @for $i from 2 through 12
+      &--#{ $i }
+        +grid-column($i, $grid)
+        margin-bottom: 0

@@ -5,19 +5,23 @@ $grid-default-clean: (columns: $grid-default-columns, gutter: 0)
 
 .grid
   +grid-container
-  +grid-collapse($grid-default)
-  > .column, > .column--1
-    +grid-column(1, $grid-default)
   > .column
-    @for $i from 2 through 12
+    margin-bottom: $grid-default-padding
+    &:last-child
+      margin-bottom: 0
+  > .column
+    @for $i from 1 through 12
       &--#{ $i }
-        +grid-column($i, $grid-default)
+        margin-bottom: $grid-default-padding
+        &:last-child
+          margin-bottom: 0
 
-  &--clean
-    +grid-collapse($grid-default-clean)
-    > .column, .column--1
-      +grid-column(1, $grid-default-clean)
-    > .column
-      @for $i from 2 through 12
-        &--#{ $i }
-          +grid-column($i, $grid-default-clean)
++medium-up
+  .grid
+    +grid($grid-default)
+    &--clean
+      width: 100%
+      margin:
+        left: 0
+        right: 0
+      +grid($grid-default-clean)
